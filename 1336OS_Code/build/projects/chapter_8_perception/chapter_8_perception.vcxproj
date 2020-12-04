@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -22,32 +22,31 @@
     <ProjectGuid>{5BA2BC8B-4731-4655-F04F-5A50DCBD56FB}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>chapter_8_perception</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -97,7 +96,7 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level4</WarningLevel>
-      <TreatWarningAsError>false</TreatWarningAsError>
+      <TreatWarningAsError>true</TreatWarningAsError>
       <AdditionalIncludeDirectories>..\..\..\src\chapter_8_perception\include;..\..\..\src;..\..\..\src\bullet_collision\include;..\..\..\src\bullet_dynamics\include;..\..\..\src\bullet_linearmath\include;..\..\..\src\demo_framework\include;..\..\..\src\ois\include;..\..\..\src\ogre3d\include;..\..\..\src\ogre3d_direct3d9\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ProgramDataBaseFileName>$(OutDir)chapter_8_perception.pdb</ProgramDataBaseFileName>
@@ -117,7 +116,7 @@
       <AdditionalDependencies>..\..\..\lib\x32\debug\bullet_collision.lib;..\..\..\lib\x32\debug\bullet_dynamics.lib;..\..\..\lib\x32\debug\bullet_linearmath.lib;..\..\..\lib\x32\debug\demo_framework.lib;..\..\..\lib\x32\debug\detour.lib;..\..\..\lib\x32\debug\freeimage.lib;..\..\..\lib\x32\debug\freetype.lib;..\..\..\lib\x32\debug\gorilla_audio.lib;..\..\..\lib\x32\debug\libjpeg.lib;..\..\..\lib\x32\debug\libogg.lib;..\..\..\lib\x32\debug\libopenjpeg.lib;..\..\..\lib\x32\debug\libpng.lib;..\..\..\lib\x32\debug\libraw.lib;..\..\..\lib\x32\debug\libtiff4.lib;..\..\..\lib\x32\debug\libvorbis.lib;..\..\..\lib\x32\debug\lua.lib;..\..\..\lib\x32\debug\ogre3d.lib;..\..\..\lib\x32\debug\ogre3d_direct3d9.lib;..\..\..\lib\x32\debug\ogre3d_gorilla.lib;..\..\..\lib\x32\debug\ogre3d_particlefx.lib;..\..\..\lib\x32\debug\ogre3d_procedural.lib;..\..\..\lib\x32\debug\ois.lib;..\..\..\lib\x32\debug\openexr.lib;..\..\..\lib\x32\debug\opensteer.lib;..\..\..\lib\x32\debug\recast.lib;..\..\..\lib\x32\debug\zlib.lib;..\..\..\lib\x32\debug\zzip.lib;d3d9.lib;dinput8.lib;dxguid.lib;d3dx9.lib;DxErr.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\..\..\lib\x32\debug;..\..\..\premake\"..\build\projects\ogre3d\obj\x32\Debug";"$(DXSDK_DIR)\Lib\x86";%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
-      <AdditionalOptions>/WX- /MACHINE:X86 OgreWin32Resources.res %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/WX /MACHINE:X86 OgreWin32Resources.res %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -146,7 +145,7 @@
       <AdditionalDependencies>..\..\..\lib\x64\debug\bullet_collision.lib;..\..\..\lib\x64\debug\bullet_dynamics.lib;..\..\..\lib\x64\debug\bullet_linearmath.lib;..\..\..\lib\x64\debug\demo_framework.lib;..\..\..\lib\x64\debug\detour.lib;..\..\..\lib\x64\debug\freeimage.lib;..\..\..\lib\x64\debug\freetype.lib;..\..\..\lib\x64\debug\gorilla_audio.lib;..\..\..\lib\x64\debug\libjpeg.lib;..\..\..\lib\x64\debug\libogg.lib;..\..\..\lib\x64\debug\libopenjpeg.lib;..\..\..\lib\x64\debug\libpng.lib;..\..\..\lib\x64\debug\libraw.lib;..\..\..\lib\x64\debug\libtiff4.lib;..\..\..\lib\x64\debug\libvorbis.lib;..\..\..\lib\x64\debug\lua.lib;..\..\..\lib\x64\debug\ogre3d.lib;..\..\..\lib\x64\debug\ogre3d_direct3d9.lib;..\..\..\lib\x64\debug\ogre3d_gorilla.lib;..\..\..\lib\x64\debug\ogre3d_particlefx.lib;..\..\..\lib\x64\debug\ogre3d_procedural.lib;..\..\..\lib\x64\debug\ois.lib;..\..\..\lib\x64\debug\openexr.lib;..\..\..\lib\x64\debug\opensteer.lib;..\..\..\lib\x64\debug\recast.lib;..\..\..\lib\x64\debug\zlib.lib;..\..\..\lib\x64\debug\zzip.lib;d3d9.lib;dinput8.lib;dxguid.lib;d3dx9.lib;DxErr.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\..\..\lib\x64\debug;..\..\..\premake\"..\build\projects\ogre3d\obj\x64\Debug";"$(DXSDK_DIR)\Lib\x64";%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
-      <AdditionalOptions>/WX- /MACHINE:X64 OgreWin32Resources.res %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/WX /MACHINE:X64 OgreWin32Resources.res %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -183,7 +182,7 @@
       <AdditionalDependencies>..\..\..\lib\x32\release\bullet_collision.lib;..\..\..\lib\x32\release\bullet_dynamics.lib;..\..\..\lib\x32\release\bullet_linearmath.lib;..\..\..\lib\x32\release\demo_framework.lib;..\..\..\lib\x32\release\detour.lib;..\..\..\lib\x32\release\freeimage.lib;..\..\..\lib\x32\release\freetype.lib;..\..\..\lib\x32\release\gorilla_audio.lib;..\..\..\lib\x32\release\libjpeg.lib;..\..\..\lib\x32\release\libogg.lib;..\..\..\lib\x32\release\libopenjpeg.lib;..\..\..\lib\x32\release\libpng.lib;..\..\..\lib\x32\release\libraw.lib;..\..\..\lib\x32\release\libtiff4.lib;..\..\..\lib\x32\release\libvorbis.lib;..\..\..\lib\x32\release\lua.lib;..\..\..\lib\x32\release\ogre3d.lib;..\..\..\lib\x32\release\ogre3d_direct3d9.lib;..\..\..\lib\x32\release\ogre3d_gorilla.lib;..\..\..\lib\x32\release\ogre3d_particlefx.lib;..\..\..\lib\x32\release\ogre3d_procedural.lib;..\..\..\lib\x32\release\ois.lib;..\..\..\lib\x32\release\openexr.lib;..\..\..\lib\x32\release\opensteer.lib;..\..\..\lib\x32\release\recast.lib;..\..\..\lib\x32\release\zlib.lib;..\..\..\lib\x32\release\zzip.lib;d3d9.lib;dinput8.lib;dxguid.lib;d3dx9.lib;DxErr.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\..\..\lib\x32\release;..\..\..\premake\"..\build\projects\ogre3d\obj\x32\Release";"$(DXSDK_DIR)\Lib\x86";%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
-      <AdditionalOptions>/WX- /MACHINE:X86 OgreWin32Resources.res %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/WX /MACHINE:X86 OgreWin32Resources.res %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -219,7 +218,7 @@
       <AdditionalDependencies>..\..\..\lib\x64\release\bullet_collision.lib;..\..\..\lib\x64\release\bullet_dynamics.lib;..\..\..\lib\x64\release\bullet_linearmath.lib;..\..\..\lib\x64\release\demo_framework.lib;..\..\..\lib\x64\release\detour.lib;..\..\..\lib\x64\release\freeimage.lib;..\..\..\lib\x64\release\freetype.lib;..\..\..\lib\x64\release\gorilla_audio.lib;..\..\..\lib\x64\release\libjpeg.lib;..\..\..\lib\x64\release\libogg.lib;..\..\..\lib\x64\release\libopenjpeg.lib;..\..\..\lib\x64\release\libpng.lib;..\..\..\lib\x64\release\libraw.lib;..\..\..\lib\x64\release\libtiff4.lib;..\..\..\lib\x64\release\libvorbis.lib;..\..\..\lib\x64\release\lua.lib;..\..\..\lib\x64\release\ogre3d.lib;..\..\..\lib\x64\release\ogre3d_direct3d9.lib;..\..\..\lib\x64\release\ogre3d_gorilla.lib;..\..\..\lib\x64\release\ogre3d_particlefx.lib;..\..\..\lib\x64\release\ogre3d_procedural.lib;..\..\..\lib\x64\release\ois.lib;..\..\..\lib\x64\release\openexr.lib;..\..\..\lib\x64\release\opensteer.lib;..\..\..\lib\x64\release\recast.lib;..\..\..\lib\x64\release\zlib.lib;..\..\..\lib\x64\release\zzip.lib;d3d9.lib;dinput8.lib;dxguid.lib;d3dx9.lib;DxErr.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\..\..\lib\x64\release;..\..\..\premake\"..\build\projects\ogre3d\obj\x64\Release";"$(DXSDK_DIR)\Lib\x64";%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
-      <AdditionalOptions>/WX- /MACHINE:X64 OgreWin32Resources.res %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/WX /MACHINE:X64 OgreWin32Resources.res %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
