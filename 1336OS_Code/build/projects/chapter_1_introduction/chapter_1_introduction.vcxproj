@@ -29,24 +29,28 @@
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -117,7 +121,6 @@
       <AdditionalLibraryDirectories>..\..\..\lib\x32\debug;..\..\..\premake\"..\build\projects\ogre3d\obj\x32\Debug";"$(DXSDK_DIR)\Lib\x86";%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
       <AdditionalOptions>/WX /MACHINE:X86 OgreWin32Resources.res %(AdditionalOptions)</AdditionalOptions>
-      <TreatLinkerWarningAsErrors>false</TreatLinkerWarningAsErrors>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -147,7 +150,6 @@
       <AdditionalLibraryDirectories>..\..\..\lib\x64\debug;..\..\..\premake\"..\build\projects\ogre3d\obj\x64\Debug";"$(DXSDK_DIR)\Lib\x64";%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
       <AdditionalOptions>/WX /MACHINE:X64 OgreWin32Resources.res %(AdditionalOptions)</AdditionalOptions>
-      <TreatLinkerWarningAsErrors>false</TreatLinkerWarningAsErrors>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -181,11 +183,10 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>..\..\..\lib\x32\release\bullet_collision.lib;..\..\..\lib\x32\release\bullet_dynamics.lib;..\..\..\lib\x32\release\bullet_linearmath.lib;..\..\..\lib\x32\release\demo_framework.lib;..\..\..\lib\x32\release\detour.lib;..\..\..\lib\x32\release\freeimage.lib;..\..\..\lib\x32\release\freetype.lib;..\..\..\lib\x32\release\gorilla_audio.lib;..\..\..\lib\x32\release\libjpeg.lib;..\..\..\lib\x32\release\libogg.lib;..\..\..\lib\x32\release\libopenjpeg.lib;..\..\..\lib\x32\release\libpng.lib;..\..\..\lib\x32\release\libraw.lib;..\..\..\lib\x32\release\libtiff4.lib;..\..\..\lib\x32\release\libvorbis.lib;..\..\..\lib\x32\release\lua.lib;..\..\..\lib\x32\release\ogre3d.lib;..\..\..\lib\x32\release\ogre3d_direct3d9.lib;..\..\..\lib\x32\release\ogre3d_gorilla.lib;..\..\..\lib\x32\release\ogre3d_particlefx.lib;..\..\..\lib\x32\release\ogre3d_procedural.lib;..\..\..\lib\x32\release\ois.lib;..\..\..\lib\x32\release\openexr.lib;..\..\..\lib\x32\release\opensteer.lib;..\..\..\lib\x32\release\recast.lib;..\..\..\lib\x32\release\zlib.lib;..\..\..\lib\x32\release\zzip.lib;d3d9.lib;dinput8.lib;dxguid.lib;d3dx9.lib;DxErr.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>legacy_stdio_definitions.lib;..\..\..\lib\x32\release\bullet_collision.lib;..\..\..\lib\x32\release\bullet_dynamics.lib;..\..\..\lib\x32\release\bullet_linearmath.lib;..\..\..\lib\x32\release\demo_framework.lib;..\..\..\lib\x32\release\detour.lib;..\..\..\lib\x32\release\freeimage.lib;..\..\..\lib\x32\release\freetype.lib;..\..\..\lib\x32\release\gorilla_audio.lib;..\..\..\lib\x32\release\libjpeg.lib;..\..\..\lib\x32\release\libogg.lib;..\..\..\lib\x32\release\libopenjpeg.lib;..\..\..\lib\x32\release\libpng.lib;..\..\..\lib\x32\release\libraw.lib;..\..\..\lib\x32\release\libtiff4.lib;..\..\..\lib\x32\release\libvorbis.lib;..\..\..\lib\x32\release\lua.lib;..\..\..\lib\x32\release\ogre3d.lib;..\..\..\lib\x32\release\ogre3d_direct3d9.lib;..\..\..\lib\x32\release\ogre3d_gorilla.lib;..\..\..\lib\x32\release\ogre3d_particlefx.lib;..\..\..\lib\x32\release\ogre3d_procedural.lib;..\..\..\lib\x32\release\ois.lib;..\..\..\lib\x32\release\openexr.lib;..\..\..\lib\x32\release\opensteer.lib;..\..\..\lib\x32\release\recast.lib;..\..\..\lib\x32\release\zlib.lib;..\..\..\lib\x32\release\zzip.lib;d3d9.lib;dinput8.lib;dxguid.lib;d3dx9.lib;DxErr.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\..\..\lib\x32\release;..\..\..\premake\"..\build\projects\ogre3d\obj\x32\Release";"$(DXSDK_DIR)\Lib\x86";%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
       <AdditionalOptions>/WX /MACHINE:X86 OgreWin32Resources.res %(AdditionalOptions)</AdditionalOptions>
-      <TreatLinkerWarningAsErrors>false</TreatLinkerWarningAsErrors>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -222,7 +223,6 @@
       <AdditionalLibraryDirectories>..\..\..\lib\x64\release;..\..\..\premake\"..\build\projects\ogre3d\obj\x64\Release";"$(DXSDK_DIR)\Lib\x64";%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
       <AdditionalOptions>/WX /MACHINE:X64 OgreWin32Resources.res %(AdditionalOptions)</AdditionalOptions>
-      <TreatLinkerWarningAsErrors>false</TreatLinkerWarningAsErrors>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
